@@ -16,6 +16,11 @@
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.3</version>
+        <configuration>
+                    <!-- Define WAR file name if needed -->
+                    <warName>ZumbaApp_GymManagementSolutions</warName>
+                    <!-- Configure other options as necessary -->
+                </configuration>
       </plugin>
     </plugins>
   </build>
@@ -25,5 +30,13 @@
     	<artifactId>mysql-connector-java</artifactId>
     	<version>8.0.16</version>
 	</dependency>
+	<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version> <!-- or a suitable version -->
+    <scope>provided</scope>
+</dependency>
+
 </dependencies>
+
 </project>

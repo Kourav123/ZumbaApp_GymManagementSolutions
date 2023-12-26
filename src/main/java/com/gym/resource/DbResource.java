@@ -10,17 +10,11 @@ public class DbResource {
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/ZumbaApp_GymManagementSolutions", "root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/ZumbaApp_GymManagementSolutions", "root","root");
    
         	
         } catch (Exception e) {
-        	 if(con!=null){
-        	        System.out.println("connected");
-        	        }else {
-        	        	System.out.println("notconnected");
-        	        }
-        	        	
-            System.err.println("Db Connection error " + e);
+        	
             e.printStackTrace();
         }
     }
@@ -38,10 +32,7 @@ public class DbResource {
             System.err.println("Close connection error " + e);
         }
     }
-    public static void main(String[] args) {
-		Connection con=getDbConnection();
-		System.out.println(con);
-	}
+  
 }
 
 
